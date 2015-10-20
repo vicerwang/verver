@@ -4,7 +4,7 @@ var Liftoff = require('liftoff');
 var program = require('commander');
 var _ = require('lodash');
 
-var server = require('../server');
+var server = require('../lib/server');
 
 program
   .version('0.0.1')

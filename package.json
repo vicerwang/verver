@@ -19,10 +19,8 @@
     "velocity": "^0.7.2",
     "watch": "^0.16.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "verver -r test"
   },
   "keywords": [
     "server",
