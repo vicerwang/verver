@@ -1,16 +1,23 @@
 #!/usr/bin/env node
 
 var Liftoff = require('liftoff');
-var argv = require('minimist')(process.argv.slice(2));
+var program = require('commander');
 var _ = require('lodash');
+
 var server = require('../server');
+
+program
+  .version('0.0.1')
+  .option('-p, --port <int>', 'server listen port', parseInt)
+  .option('-r, --root <path>', 'server root directory')
+  .parse(process.argv);
 
 var defaults = {
     root: process.cwd(),
     port: 3000,
     livereload: true,
     livereloadPort: 35729,
-    proxy: null,
+    rewrite: null,
     jsonp: 'jsoncallback'
 }
 
@@ -25,8 +32,7 @@ var cli = new Liftoff({
 });
 
 cli.launch({
-    cwd: argv.r || argv.root,
-    configPath: argv.f || argv.file,
+    cwd: program.root,
 }, function(env) {
     var config = {};
     if (env.configPath) {
@@ -34,9 +40,8 @@ cli.launch({
         delete require.cache[env.configPath];
         config.root = env.cwd;
     }
-    var port = argv.p || argv.port;
-    if (port && _.isNumber(port)) {
-        config.port = port;
+    if (program.port) {
+        config.port = program.port;
     }
     config = _.merge({}, defaults, config)
 
