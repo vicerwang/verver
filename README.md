@@ -27,7 +27,7 @@ root
 │       └── index.html.js      // 放置Velocity模版对应的mock数据
 ├── template                   // 放置Velocity模版
 │   └── index.html
-└── verver.js
+└── verver.js                  // verver配置文件
 ```
 
 ## 查看demo
