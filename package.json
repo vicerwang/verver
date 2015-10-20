@@ -6,6 +6,14 @@
   "bin": {
     "verver": "./bin/verver.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vicerwang/verver"
+  },
+  "bugs": {
+    "url": "https://github.com/vicerwang/verver/issues"
+  },
+  "homepage": "https://github.com/vicerwang/verver",
   "dependencies": {
     "commander": "^2.9.0",
     "connect": "^3.4.0",
