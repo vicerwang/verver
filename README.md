@@ -65,5 +65,6 @@ module.exports = {
     livereload: true,      //是否监听文件改动，自动刷新页面，依赖chrome livereload插件
     rewrite: null,         //转发请求的对象，key为转发后url，value为实际url
     jsonp: 'jsoncallback', //模拟跨域访问ajax请求的回调函数名
-    serverOpts: null       //browser
+    serverOpts: null       //browser-sync server属性的配置
+}
 ```
