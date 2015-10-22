@@ -16,9 +16,9 @@ var defaults = {
     root: process.cwd(),
     port: 3000,
     livereload: true,
-    livereloadPort: 35729,
     rewrite: null,
-    jsonp: 'jsoncallback'
+    jsonp: 'jsoncallback',
+    serverOpts: null
 }
 
 var cli = new Liftoff({

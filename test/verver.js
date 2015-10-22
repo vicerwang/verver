@@ -1,6 +1,6 @@
 module.exports = {
-    port: 3001,
+    port: 8001,
     rewrite: {
-        '/': '/template/index.html'
+        '/index.html': '/template/index.html'
     }
 }
