@@ -1,5 +1,5 @@
 # Verver
-一个基于[connect](https://github.com/senchalabs/connect)的简单前端开发服务器，实现了解析Velocity模版，模拟Ajax请求，转发请求以及自动刷新页面等功能。
+一个基于[browser-sync](https://github.com/BrowserSync/browser-sync)的简单前端开发服务器，实现了解析Velocity模版，模拟Ajax请求，转发请求以及自动刷新页面等功能。
 
 ## 安装
 ```
@@ -63,8 +63,7 @@ verver
 module.exports = {
     port: 3000,            //server监听端口号
     livereload: true,      //是否监听文件改动，自动刷新页面，依赖chrome livereload插件
-    livereloadPort: 35729, //livereload server监听端口号
     rewrite: null,         //转发请求的对象，key为转发后url，value为实际url
-    jsonp: 'jsoncallback'  //模拟跨域访问ajax请求的回调函数名
-}
+    jsonp: 'jsoncallback', //模拟跨域访问ajax请求的回调函数名
+    serverOpts: null       //browser
 ```
