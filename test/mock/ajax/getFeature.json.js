@@ -4,6 +4,8 @@ module.exports = {
         "Parse Velocity",
         "Mock Ajax",
         "Rewrite Request",
-        "Auto Refresh"
+        "Auto Refresh",
+        "Compile Less",
+        "Compress CSS/JS"
     ]
 }

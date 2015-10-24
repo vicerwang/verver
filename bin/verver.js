@@ -2,7 +2,6 @@
 
 var Liftoff = require('liftoff');
 var program = require('commander');
-var _ = require('lodash');
 
 var server = require('../lib/server');
 
@@ -11,15 +10,6 @@ program
   .option('-p, --port <int>', 'server listen port', parseInt)
   .option('-r, --root <path>', 'server root directory')
   .parse(process.argv);
-
-var defaults = {
-    root: process.cwd(),
-    port: 3000,
-    livereload: true,
-    rewrite: null,
-    jsonp: 'jsoncallback',
-    serverOpts: null
-}
 
 var cli = new Liftoff({
     name: 'verver',
@@ -43,7 +33,6 @@ cli.launch({
     if (program.port) {
         config.port = program.port;
     }
-    config = _.merge({}, defaults, config)
 
     server.start(config);
 });
